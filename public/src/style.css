@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(236, 236, 236);
+    font-family: 'Khand', sans-serif;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.container .cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container .cards .card{
+    position: relative;
+    background-color: white;
+    width: calc(15%-20px);
+    border-radius: 10px;
+    
+}
+
+.container .cards .card .card-image{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container .cards .card .card-image img{
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.container .cards .card .card-image .img2{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    transform-origin: right;
+    transform: translateX(100%)
+}
+
+
+.container .cards .card:hover  .card-image .img2{
+   z-index: 1;
+   right: 0;
+   transform: translateX(0px);
+   visibility: visible;
+   
+
+}
+
+.container .cards .card .card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    gap: 8px;
+}
+
+
+.container .cards .card .card-content .card-icon i{
+    color: rgba(0, 0, 0, 0.699);
+    font-size: 10px;
+}
+
+
+.container .cards .card .card-content h4 a{
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+}
+
+.container .cards .card .card-content p{
+    color: #008000;
+    font-size: 17px;
+}
+
+.container .cards .card .card-content p span{
+    text-decoration: line-through;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.container .cards .card .discount-percent{
+    position: absolute;
+    top: 5%;
+    left: -5%;
+    width: 20%;
+    background-color: #7ca53b;
+    text-align: center;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.container .cards .card .discount-percent span{
+    color: white;
+    font-size: 12px;
+    position: relative;
+    
+}
+
+.container .cards .card .discount-percent span::after{
+    position: absolute;
+    content: "";
+    left: -35%;
+    bottom: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #7ca53b   transparent   transparent  ;
+    filter: brightness(95%);
+    transform: rotate(-135deg);
+   
+}
+
+#star-opacity{
+    color: rgba(0, 0, 0, 0.281);
+}
